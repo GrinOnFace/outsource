@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebCraft — Создаём цифровые шедевры</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Animated background -->
+  <div class="bg-gradient"></div>
+  <div class="bg-grid"></div>
+  <div class="floating-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+    <div class="shape shape-5"></div>
+  </div>
+
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="logo">
+        <span class="logo-text">WebCraft</span>
+        <span class="logo-dot"></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#portfolio">Портфолио</a></li>
+        <li><a href="#process">Процесс</a></li>
+        <li><a href="#why">Почему мы</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Сменить тему" title="Сменить тему">
+        <span class="theme-icon theme-icon-sun">☀</span>
+        <span class="theme-icon theme-icon-moon">☽</span>
+      </button>
+      <button class="nav-cta" data-magnetic>Обсудить проект</button>
+      <button class="burger" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-badge animate-in">
+        <span class="badge-dot"></span>
+        Студия веб-разработки
+      </div>
+      <h1 class="hero-title animate-in">
+        <span class="title-line">Создаём</span>
+        <span class="title-line title-accent">цифровые</span>
+        <span class="title-line">шедевры</span>
+      </h1>
+      <p class="hero-subtitle animate-in">
+        Превращаем идеи в высокопроизводительные сайты с продуманным UX и запоминающимся дизайном
+      </p>
+      <div class="hero-actions animate-in">
+        <a href="#contact" class="btn btn-primary" data-magnetic>
+          <span>Начать проект</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#portfolio" class="btn btn-ghost" data-magnetic>
+          Смотреть работы
+        </a>
+      </div>
+      <div class="hero-stats animate-in">
+        <div class="stat">
+          <span class="stat-number" data-count="28">0</span>
+          <span class="stat-label">Проектов</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="5">0</span>
+          <span class="stat-label">Лет опыта</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+      <div class="section-header">
+        <span class="section-tag animate-in">Что мы делаем</span>
+        <h2 class="section-title animate-in">Полный цикл разработки</h2>
+      </div>
+      <div class="services-grid">
+        <article class="service-card animate-in" data-delay="0">
+          <div class="card-glow"></div>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="4" y="8" width="40" height="32" rx="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M4 16h40M16 8v8M32 8v8" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Лендинги</h3>
+          <p>Одностраничные сайты с высокой конверсией и цепляющим дизайном</p>
+        </article>
+        <article class="service-card animate-in" data-delay="100">
+          <div class="card-glow"></div>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="6" y="6" width="36" height="36" rx="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M6 18h36M18 6v36" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Корпоративные сайты</h3>
+          <p>Многостраничные решения для бизнеса любого масштаба</p>
+        </article>
+        <article class="service-card animate-in" data-delay="200">
+          <div class="card-glow"></div>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/>
+              <path d="M24 12v12l8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>E-commerce</h3>
+          <p>Интернет-магазины с удобной каталогизацией и оплатой</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Infinite ticker -->
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <div class="ticker-track">
+          <span class="ticker-item">Web design</span>
+          <span class="ticker-dot"></span>
+          <span class="ticker-item">Разработка сайтов</span>
+          <span class="ticker-dot"></span>
+          <span class="ticker-item">UX/UI дизайн</span>
+          <span class="ticker-dot"></span>
+          <span class="ticker-item">Лендинги</span>
+          <span class="ticker-dot"></span>
+          <span class="ticker-item">E-commerce</span>
+          <span class="ticker-dot"></span>
+          <span class="ticker-item">Корпоративные сайты</span>
+          <span class="ticker-dot"></span>
+          <span class="ticker-item">Брендинг</span>
+          <span class="ticker-dot"></span>
+          <span class="ticker-item">Адаптивная вёрстка</span>
+        </div>
+        <div class="ticker-track" aria-hidden="true">
+          <span class="ticker-item">Web design</span>
+          <span class="ticker-dot"></span>
+          <span class="ticker-item">Разработка сайтов</span>
+          <span class="ticker-dot"></span>
+          <span class="ticker-item">UX/UI дизайн</span>
+          <span class="ticker-dot"></span>
+          <span class="ticker-item">Лендинги</span>
+          <span class="ticker-dot"></span>
+          <span class="ticker-item">E-commerce</span>
+          <span class="ticker-dot"></span>
+          <span class="ticker-item">Корпоративные сайты</span>
+          <span class="ticker-dot"></span>
+          <span class="ticker-item">Брендинг</span>
+          <span class="ticker-dot"></span>
+          <span class="ticker-item">Адаптивная вёрстка</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio - примеры дизайна (картинки добавляются в images/portfolio/) -->
+    <section class="portfolio" id="portfolio">
+      <div class="section-header">
+        <span class="section-tag animate-in">Примеры работ</span>
+        <h2 class="section-title animate-in">Наши проекты</h2>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item animate-in" data-delay="0">
+          <img src="images/portfolio/01.jpg" alt="Пример дизайна сайта 1" onerror="this.style.display='none'">
+        </div>
+        <div class="portfolio-item animate-in" data-delay="100">
+          <img src="images/portfolio/02.jpg" alt="Пример дизайна сайта 2" onerror="this.style.display='none'">
+        </div>
+        <div class="portfolio-item animate-in" data-delay="200">
+          <img src="images/portfolio/03.jpg" alt="Пример дизайна сайта 3" onerror="this.style.display='none'">
+        </div>
+        <div class="portfolio-item animate-in" data-delay="0">
+          <img src="images/portfolio/04.jpg" alt="Пример дизайна сайта 4" onerror="this.style.display='none'">
+        </div>
+        <div class="portfolio-item animate-in" data-delay="100">
+          <img src="images/portfolio/05.jpg" alt="Пример дизайна сайта 5" onerror="this.style.display='none'">
+        </div>
+        <div class="portfolio-item animate-in" data-delay="200">
+          <img src="images/portfolio/06.jpg" alt="Пример дизайна сайта 6" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </section>
+
+    <!-- Process / What we offer -->
+    <section class="process" id="process">
+      <div class="section-header">
+        <span class="section-tag animate-in">Что вы получаете</span>
+        <h2 class="section-title animate-in">Разработка и поддержка</h2>
+        <p class="section-desc animate-in">Мы не просто создаём сайт — мы ведём проект от идеи до запуска и сопровождаем его после</p>
+      </div>
+      <div class="process-grid">
+        <article class="process-card animate-in" data-delay="0">
+          <div class="process-card-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M8 12h32M8 24h32M8 36h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="36" cy="36" r="4" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Разработка сайта</h3>
+          <p>Создаём сайт с нуля: от прототипа и дизайна до вёрстки и программирования. Адаптивность, скорость загрузки и удобство для пользователя — наш стандарт.</p>
+        </article>
+        <article class="process-card animate-in" data-delay="100">
+          <div class="process-card-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M24 4v8M24 36v8M4 24h8M36 24h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="24" cy="24" r="12" stroke="currentColor" stroke-width="2"/>
+              <path d="M24 16v8l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Запуск и настройка</h3>
+          <p>Выводим сайт в продакшен, настраиваем хостинг, домен и SSL. Проверяем работу форм, аналитики и всех ключевых функций.</p>
+        </article>
+        <article class="process-card animate-in" data-delay="200">
+          <div class="process-card-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M24 4l16 8v10c0 11-7 20-16 24-9-4-16-13-16-24V12l16-8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M18 24l6 6 12-12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Поддержка и сопровождение</h3>
+          <p>Не бросаем после запуска. Решаем технические проблемы, обновляем контент, следим за стабильностью работы сайта.</p>
+        </article>
+        <article class="process-card animate-in" data-delay="300">
+          <div class="process-card-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M8 20l16 16 16-16M8 28l16 16 16-16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Доработки и обновления</h3>
+          <p>Добавляем новые разделы, интегрируем сервисы, дорабатываем функционал. Сайт растёт вместе с вашим бизнесом.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="why-us" id="why">
+      <div class="section-header">
+        <span class="section-tag animate-in">Наши преимущества</span>
+        <h2 class="section-title animate-in">Почему мы</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card animate-in" data-delay="0">
+          <div class="why-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/>
+              <path d="M24 12v12l8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Соблюдаем сроки</h3>
+          <p>Чёткий план и этапы. Вы всегда знаете, когда будет готово. Не тянем и не затягиваем.</p>
+        </div>
+        <div class="why-card animate-in" data-delay="100">
+          <div class="why-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M24 4l16 8v10c0 11-7 20-16 24-9-4-16-13-16-24V12l16-8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M18 24l6 6 12-12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Гарантия качества</h3>
+          <p>Исправляем недочёты бесплатно. Даём гарантию на работу и поддерживаем после сдачи.</p>
+        </div>
+        <div class="why-card animate-in" data-delay="200">
+          <div class="why-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M8 12h12l4 8 12-16 4 24H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Быстрая связь</h3>
+          <p>Отвечаем в течение дня. Обсуждаем в удобном формате — мессенджеры, почта, звонки.</p>
+        </div>
+        <div class="why-card animate-in" data-delay="300">
+          <div class="why-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M24 8v32M8 24h32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="24" cy="24" r="12" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Опыт и экспертиза</h3>
+          <p>Делаем сайты любой сложности. Знаем современные технологии и лучшие практики.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacts -->
+    <section class="cta" id="contact">
+      <div class="cta-content animate-in">
+        <h2>Наши контакты</h2>
+        <p>Напишите нам в Telegram — ответим в течение дня</p>
+        <a href="https://t.me/busyleap" class="btn btn-primary btn-telegram" target="_blank" rel="noopener noreferrer" data-magnetic>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+          </svg>
+          <span>@busyleap</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <a href="#" class="logo">
+        <span class="logo-text">WebCraft</span>
+        <span class="logo-dot"></span>
+      </a>
+      <p>© 2026 WebCraft. Создаём цифровые продукты.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
